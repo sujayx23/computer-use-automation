@@ -9,7 +9,7 @@ from artifacts.schema import CapabilityArtifact, BusinessOutcome, RecoverableCon
 
 def main():
     if len(sys.argv) != 2:
-        print("usage: python3 scripts/review_artifact.py <artifact.json>")
+        print("usage: python3 scripts/review_balance_artifact.py <artifact.json>")
         sys.exit(1)
 
     path = Path(sys.argv[1])
