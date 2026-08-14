@@ -1,0 +1,232 @@
+{
+  "schema_version": "1.0",
+  "capability_id": "meridian_servicing_console.cc45416a",
+  "name": "open a new sub-account for this member, confirm it, and comp",
+  "description": "open a new sub-account for this member, confirm it, and complete the account opening",
+  "version": 3,
+  "created_at": "2026-08-14T03:49:55.236825+00:00",
+  "created_by": "llm_discovery",
+  "review_status": "approved",
+  "target": {
+    "app_id": "meridian_servicing_console",
+    "base_url": "http://127.0.0.1:5055/",
+    "vendor_product": null
+  },
+  "goal_text": "open a new sub-account for this member, confirm it, and complete the account opening",
+  "inputs": [
+    {
+      "name": "member_id",
+      "type": "string",
+      "required": true,
+      "description": "",
+      "sensitive": false
+    }
+  ],
+  "outputs": [],
+  "steps": [
+    {
+      "step_id": "s0",
+      "action": "fill",
+      "description": "Fill 'member_id' with {{member_id}}",
+      "locators": [
+        {
+          "kind": "css_name_attr",
+          "value": "member_id",
+          "role": null,
+          "rationale": "form 'name' attribute; required for submission so it's stable across redesigns"
+        }
+      ],
+      "value_template": "{{member_id}}",
+      "url_template": null,
+      "extract_key": null,
+      "text_source": "inner_text",
+      "risk": "safe",
+      "requires_confirmation": false,
+      "timeout_ms": 8000,
+      "recoverable_on": []
+    },
+    {
+      "step_id": "s1",
+      "action": "click",
+      "description": "Click 'Search'",
+      "locators": [
+        {
+          "kind": "role",
+          "value": "Search",
+          "role": "button",
+          "rationale": "accessibility role + accessible name"
+        }
+      ],
+      "value_template": null,
+      "url_template": null,
+      "extract_key": null,
+      "text_source": "inner_text",
+      "risk": "safe",
+      "requires_confirmation": false,
+      "timeout_ms": 8000,
+      "recoverable_on": []
+    },
+    {
+      "step_id": "s2",
+      "action": "click",
+      "description": "Click 'Open New Sub-Account'",
+      "locators": [
+        {
+          "kind": "role",
+          "value": "Open New Sub-Account",
+          "role": "link",
+          "rationale": "accessibility role + accessible name"
+        }
+      ],
+      "value_template": null,
+      "url_template": null,
+      "extract_key": null,
+      "text_source": "inner_text",
+      "risk": "safe",
+      "requires_confirmation": false,
+      "timeout_ms": 8000,
+      "recoverable_on": []
+    },
+    {
+      "step_id": "s3",
+      "action": "fill",
+      "description": "Fill 'nickname' with Vacation Fund",
+      "locators": [
+        {
+          "kind": "css_name_attr",
+          "value": "nickname",
+          "role": null,
+          "rationale": "form 'name' attribute; required for submission so it's stable across redesigns"
+        }
+      ],
+      "value_template": "Vacation Fund",
+      "url_template": null,
+      "extract_key": null,
+      "text_source": "inner_text",
+      "risk": "safe",
+      "requires_confirmation": false,
+      "timeout_ms": 8000,
+      "recoverable_on": []
+    },
+    {
+      "step_id": "s4",
+      "action": "select",
+      "description": "Select 'Holiday Club' in 'account_type'",
+      "locators": [
+        {
+          "kind": "css_name_attr",
+          "value": "account_type",
+          "role": null,
+          "rationale": "form 'name' attribute; required for submission so it's stable across redesigns"
+        },
+        {
+          "kind": "role",
+          "value": "Savings\nHoliday Club\nGoal Saver",
+          "role": "combobox",
+          "rationale": "accessibility role + accessible name"
+        }
+      ],
+      "value_template": "Holiday Club",
+      "url_template": null,
+      "extract_key": null,
+      "text_source": "inner_text",
+      "risk": "safe",
+      "requires_confirmation": false,
+      "timeout_ms": 8000,
+      "recoverable_on": []
+    },
+    {
+      "step_id": "s5",
+      "action": "fill",
+      "description": "Fill 'deposit' with 50.00",
+      "locators": [
+        {
+          "kind": "css_name_attr",
+          "value": "deposit",
+          "role": null,
+          "rationale": "form 'name' attribute; required for submission so it's stable across redesigns"
+        }
+      ],
+      "value_template": "50.00",
+      "url_template": null,
+      "extract_key": null,
+      "text_source": "inner_text",
+      "risk": "safe",
+      "requires_confirmation": false,
+      "timeout_ms": 8000,
+      "recoverable_on": []
+    },
+    {
+      "step_id": "s6",
+      "action": "click",
+      "description": "Click 'Continue'",
+      "locators": [
+        {
+          "kind": "role",
+          "value": "Continue",
+          "role": "button",
+          "rationale": "accessibility role + accessible name"
+        }
+      ],
+      "value_template": null,
+      "url_template": null,
+      "extract_key": null,
+      "text_source": "inner_text",
+      "risk": "safe",
+      "requires_confirmation": false,
+      "timeout_ms": 8000,
+      "recoverable_on": []
+    },
+    {
+      "step_id": "s7",
+      "action": "click",
+      "description": "Click 'Confirm and Open'",
+      "locators": [
+        {
+          "kind": "css_name_attr",
+          "value": "decision",
+          "role": null,
+          "rationale": "form 'name' attribute; required for submission so it's stable across redesigns"
+        },
+        {
+          "kind": "role",
+          "value": "Confirm and Open",
+          "role": "button",
+          "rationale": "accessibility role + accessible name"
+        }
+      ],
+      "value_template": null,
+      "url_template": null,
+      "extract_key": null,
+      "text_source": "inner_text",
+      "risk": "irreversible",
+      "requires_confirmation": true,
+      "timeout_ms": 8000,
+      "recoverable_on": []
+    }
+  ],
+  "checkpoint": {
+    "description": "Successfully opened a new sub-account for member 67890 and confirmed the account opening.",
+    "locators": [],
+    "text_source": "inner_text",
+    "expected_text_contains": "Sub-Account Opened Successfully",
+    "expected_url_contains": null
+  },
+  "known_business_outcomes": [
+    {
+      "name": "member_not_found",
+      "match_text": "No member found",
+      "description": "the given member id does not exist -- a legitimate answer, not an error"
+    },
+    {
+      "name": "permission_denied",
+      "match_text": "Access Denied",
+      "description": "the record is access-restricted for the caller's role"
+    }
+  ],
+  "allowed_domains": [
+    "127.0.0.1",
+    "localhost"
+  ],
+  "max_risk_level": "safe"
+}

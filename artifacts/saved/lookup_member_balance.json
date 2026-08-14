@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0",
+  "capability_id": "meridian_servicing_console.38e1334e",
+  "name": "look up member 12345 and read their current savings balance",
+  "description": "look up member 12345 and read their current savings balance",
+  "version": 2,
+  "created_at": "2026-08-14T01:41:22.105201+00:00",
+  "created_by": "llm_discovery",
+  "review_status": "approved",
+  "target": {
+    "app_id": "meridian_servicing_console",
+    "base_url": "http://127.0.0.1:5055/",
+    "vendor_product": null
+  },
+  "goal_text": "look up member 12345 and read their current savings balance",
+  "inputs": [
+    {
+      "name": "member_id",
+      "type": "string",
+      "required": true,
+      "description": "",
+      "sensitive": false
+    }
+  ],
+  "outputs": [
+    {
+      "name": "savings_balance",
+      "type": "string",
+      "description": ""
+    }
+  ],
+  "steps": [
+    {
+      "step_id": "s0",
+      "action": "fill",
+      "description": "Fill 'member_id' with {{member_id}}",
+      "locators": [
+        {
+          "kind": "css_name_attr",
+          "value": "member_id",
+          "role": null,
+          "rationale": "form 'name' attribute; required for submission so it's stable across redesigns"
+        }
+      ],
+      "value_template": "{{member_id}}",
+      "url_template": null,
+      "extract_key": null,
+      "text_source": "inner_text",
+      "risk": "safe",
+      "requires_confirmation": false,
+      "timeout_ms": 8000,
+      "recoverable_on": []
+    },
+    {
+      "step_id": "s1",
+      "action": "click",
+      "description": "Click 'Search'",
+      "locators": [
+        {
+          "kind": "role",
+          "value": "Search",
+          "role": "button",
+          "rationale": "accessibility role + accessible name"
+        }
+      ],
+      "value_template": null,
+      "url_template": null,
+      "extract_key": null,
+      "text_source": "inner_text",
+      "risk": "safe",
+      "requires_confirmation": false,
+      "timeout_ms": 8000,
+      "recoverable_on": []
+    },
+    {
+      "step_id": "s2",
+      "action": "extract",
+      "description": "Extract 'Savings Balance' into output 'savings_balance'",
+      "locators": [
+        {
+          "kind": "row_label",
+          "value": "Savings Balance",
+          "role": null,
+          "rationale": "legacy label/value table row -- read the last cell in the row containing this label"
+        }
+      ],
+      "value_template": null,
+      "url_template": null,
+      "extract_key": "savings_balance",
+      "text_source": "inner_text",
+      "risk": "safe",
+      "requires_confirmation": false,
+      "timeout_ms": 8000,
+      "recoverable_on": [
+        {
+          "name": "session_timeout",
+          "match_text": "Session Expired",
+          "strategy": "reload",
+          "max_attempts": 2
+        }
+      ]
+    }
+  ],
+  "checkpoint": {
+    "description": "Member 12345 record viewed and savings balance extracted",
+    "locators": [],
+    "text_source": "inner_text",
+    "expected_text_contains": "Savings Balance",
+    "expected_url_contains": null
+  },
+  "known_business_outcomes": [
+    {
+      "name": "member_not_found",
+      "match_text": "No member found",
+      "description": "the given member id does not exist -- a legitimate answer, not an error"
+    },
+    {
+      "name": "permission_denied",
+      "match_text": "Access Denied",
+      "description": "the record is access-restricted for the caller's role"
+    }
+  ],
+  "allowed_domains": [
+    "127.0.0.1",
+    "localhost"
+  ],
+  "max_risk_level": "safe"
+}

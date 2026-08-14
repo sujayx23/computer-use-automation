@@ -1,0 +1,5 @@
+{
+  "allowed_domains": ["127.0.0.1", "localhost"],
+  "allowed_action_types": ["navigate", "click", "fill", "select", "wait_for", "extract", "assert_text"],
+  "block_irreversible_by_default": true
+}
