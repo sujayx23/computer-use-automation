@@ -1,0 +1,7 @@
+{"event": "replay_start", "capability_id": "meridian_servicing_console.38e1334e", "inputs_redacted": {"member_id": "88888"}, "ts": "2026-08-14T01:49:44.920711+00:00"}
+{"event": "step_executed", "step_id": "s0", "action": "ActionType.FILL", "ok": true, "detail": "filled '88888'", "ts": "2026-08-14T01:49:45.149905+00:00"}
+{"event": "step_executed", "step_id": "s1", "action": "ActionType.CLICK", "ok": true, "detail": "clicked", "ts": "2026-08-14T01:49:45.184155+00:00"}
+{"event": "recoverable_condition_detected", "step_id": "s2", "condition": "session_timeout", "strategy": "reload", "attempt": 0, "ts": "2026-08-14T01:49:45.189770+00:00"}
+{"event": "step_executed", "step_id": "s2", "action": "ActionType.EXTRACT", "ok": true, "detail": "extracted '$3200.00'", "ts": "2026-08-14T01:49:45.208602+00:00"}
+{"event": "checkpoint_check", "ok": true, "detail": "expected text found on page", "ts": "2026-08-14T01:49:45.209356+00:00"}
+{"event": "replay_success", "outputs": {"savings_balance": "$3200.00"}, "ts": "2026-08-14T01:49:45.239854+00:00"}

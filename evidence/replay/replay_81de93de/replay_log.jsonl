@@ -1,0 +1,4 @@
+{"event": "replay_start", "capability_id": "meridian_servicing_console.38e1334e", "inputs_redacted": {"member_id": "99999"}, "ts": "2026-08-14T01:49:41.349486+00:00"}
+{"event": "step_executed", "step_id": "s0", "action": "ActionType.FILL", "ok": true, "detail": "filled '99999'", "ts": "2026-08-14T01:49:41.580106+00:00"}
+{"event": "step_executed", "step_id": "s1", "action": "ActionType.CLICK", "ok": true, "detail": "clicked", "ts": "2026-08-14T01:49:41.634112+00:00"}
+{"event": "business_outcome", "step_id": "s2", "outcome": "permission_denied", "ts": "2026-08-14T01:49:41.639847+00:00"}

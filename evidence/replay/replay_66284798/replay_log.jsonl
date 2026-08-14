@@ -1,0 +1,14 @@
+{"event": "replay_start", "capability_id": "meridian_servicing_console.cc45416a", "inputs_redacted": {"member_id": "67890"}, "ts": "2026-08-14T04:27:07.061906+00:00"}
+{"event": "step_executed", "step_id": "s0", "action": "ActionType.FILL", "ok": true, "detail": "filled '67890'", "ts": "2026-08-14T04:27:07.294798+00:00"}
+{"event": "step_executed", "step_id": "s1", "action": "ActionType.CLICK", "ok": true, "detail": "clicked", "ts": "2026-08-14T04:27:07.338788+00:00"}
+{"event": "step_executed", "step_id": "s2", "action": "ActionType.CLICK", "ok": true, "detail": "clicked", "ts": "2026-08-14T04:27:07.372784+00:00"}
+{"event": "step_executed", "step_id": "s3", "action": "ActionType.FILL", "ok": true, "detail": "filled 'Vacation Fund'", "ts": "2026-08-14T04:27:07.380605+00:00"}
+{"event": "step_executed", "step_id": "s4", "action": "ActionType.SELECT", "ok": true, "detail": "selected 'Holiday Club'", "ts": "2026-08-14T04:27:07.383770+00:00"}
+{"event": "step_executed", "step_id": "s5", "action": "ActionType.FILL", "ok": true, "detail": "filled '50.00'", "ts": "2026-08-14T04:27:07.387215+00:00"}
+{"event": "step_executed", "step_id": "s6", "action": "ActionType.CLICK", "ok": true, "detail": "clicked", "ts": "2026-08-14T04:27:07.439202+00:00"}
+{"event": "escalation_required", "step_id": "s7", "reason": "irreversible action blocked by policy: requires explicit confirmation clearance", "ts": "2026-08-14T04:27:07.444839+00:00"}
+{"event": "control_transfer", "control": "human", "escalation_id": "d4b60fd3-bfa2-4588-a922-d65b1ee2edd1", "ts": "2026-08-14T04:27:07.467927+00:00"}
+{"event": "operator_action", "escalation_id": "d4b60fd3-bfa2-4588-a922-d65b1ee2edd1", "resolved": true, "ts": "2026-08-14T04:27:07.548489+00:00"}
+{"event": "control_transfer", "control": "automation", "escalation_id": "d4b60fd3-bfa2-4588-a922-d65b1ee2edd1", "note": "resumed on same live session", "ts": "2026-08-14T04:27:07.548496+00:00"}
+{"event": "checkpoint_check", "ok": true, "detail": "expected text found on page", "ts": "2026-08-14T04:27:07.554290+00:00"}
+{"event": "replay_success", "outputs": {}, "ts": "2026-08-14T04:27:07.595804+00:00"}

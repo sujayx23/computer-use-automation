@@ -1,0 +1,55 @@
+{
+  "run_id": "16d0e43d-2097-4190-a9b3-f56bf52ec462",
+  "type": "discovery",
+  "goal": "look up member 12345 and read their current savings balance",
+  "started_at": "2026-08-14T01:41:08.570213+00:00",
+  "steps": [
+    {
+      "step": 0,
+      "tool": "fill",
+      "input": {
+        "param_ref": "member_id",
+        "element_index": 0
+      },
+      "reasoning": "",
+      "result": "ok"
+    },
+    {
+      "step": 1,
+      "tool": "click",
+      "input": {
+        "element_index": 1
+      },
+      "reasoning": "",
+      "result": "ok"
+    },
+    {
+      "step": 2,
+      "tool": "extract_row_label",
+      "input": {
+        "output_key": "savings_balance",
+        "label_text": "Savings Balance"
+      },
+      "reasoning": "",
+      "result": "extracted: $15230.10"
+    },
+    {
+      "step": 3,
+      "tool": "finish_success",
+      "input": {
+        "checkpoint_description": "Member 12345 record viewed and savings balance extracted",
+        "checkpoint_text_contains": "Member Record: 12345"
+      },
+      "reasoning": ""
+    }
+  ],
+  "outcome": {
+    "status": "success",
+    "checkpoint": "Member 12345 record viewed and savings balance extracted"
+  },
+  "finished_at": "2026-08-14T01:41:22.105131+00:00",
+  "final_url": "http://127.0.0.1:5055/member/12345",
+  "output_values_sample": {
+    "savings_balance": "$15230.10"
+  }
+}

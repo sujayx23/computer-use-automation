@@ -1,0 +1,10 @@
+{
+  "intervention_id": "d4b60fd3-bfa2-4588-a922-d65b1ee2edd1",
+  "capability_id": "meridian_servicing_console.cc45416a",
+  "step_id": "s7",
+  "reason": "irreversible action blocked by policy: requires explicit confirmation clearance",
+  "current_url": "http://127.0.0.1:5055/member/67890/new-subaccount/confirm",
+  "screenshot": "evidence/replay/replay_66284798/intervention_d4b60fd3.png",
+  "raised_at": "2026-08-14T04:27:07.467704+00:00",
+  "control": "human"
+}

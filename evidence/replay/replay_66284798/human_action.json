@@ -1,0 +1,7 @@
+{
+  "performed_by": "human_operator (mocked)",
+  "step_id": "s7",
+  "action": "click",
+  "note": "manually approved and performed the irreversible step that automation was blocked from taking",
+  "at": "2026-08-14T04:27:07.523267+00:00"
+}

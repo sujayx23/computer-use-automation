@@ -1,0 +1,11 @@
+{"event": "replay_start", "capability_id": "meridian_servicing_console.cc45416a", "inputs_redacted": {"member_id": "67890"}, "ts": "2026-08-14T04:27:02.023345+00:00"}
+{"event": "step_executed", "step_id": "s0", "action": "ActionType.FILL", "ok": true, "detail": "filled '67890'", "ts": "2026-08-14T04:27:02.335919+00:00"}
+{"event": "step_executed", "step_id": "s1", "action": "ActionType.CLICK", "ok": true, "detail": "clicked", "ts": "2026-08-14T04:27:02.372590+00:00"}
+{"event": "step_executed", "step_id": "s2", "action": "ActionType.CLICK", "ok": true, "detail": "clicked", "ts": "2026-08-14T04:27:02.406152+00:00"}
+{"event": "step_executed", "step_id": "s3", "action": "ActionType.FILL", "ok": true, "detail": "filled 'Vacation Fund'", "ts": "2026-08-14T04:27:02.414738+00:00"}
+{"event": "step_executed", "step_id": "s4", "action": "ActionType.SELECT", "ok": true, "detail": "selected 'Holiday Club'", "ts": "2026-08-14T04:27:02.417919+00:00"}
+{"event": "step_executed", "step_id": "s5", "action": "ActionType.FILL", "ok": true, "detail": "filled '50.00'", "ts": "2026-08-14T04:27:02.421251+00:00"}
+{"event": "step_executed", "step_id": "s6", "action": "ActionType.CLICK", "ok": true, "detail": "clicked", "ts": "2026-08-14T04:27:02.472781+00:00"}
+{"event": "escalation_required", "step_id": "s7", "reason": "irreversible action blocked by policy: requires explicit confirmation clearance", "ts": "2026-08-14T04:27:02.478398+00:00"}
+{"event": "control_transfer", "control": "human", "escalation_id": "30121de7-5061-4934-835a-7de6fb14174f", "ts": "2026-08-14T04:27:02.500769+00:00"}
+{"event": "operator_action", "escalation_id": "30121de7-5061-4934-835a-7de6fb14174f", "resolved": false, "ts": "2026-08-14T04:27:02.500772+00:00"}
